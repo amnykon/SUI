@@ -11,6 +11,10 @@ public struct RequestedSize {
     self.size=size
     self.moldable=moldable
   }
+
+  func pivot() -> RequestedSize {
+    return RequestedSize(size.pivot(), moldable:moldable.pivot())
+  }
 }
 
 extension RequestedSize:Equatable {

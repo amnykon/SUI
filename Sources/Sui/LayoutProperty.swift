@@ -22,5 +22,8 @@ public protocol Layout {
   func allocateSpace(_ widget:Widget) -> AllocatedSpace
 }
 
-public let layoutProperty=Property<Layout,Style>(VerticalLayout())
+public let layoutProperty=Property<Layout,Style>(StackLayout())
+
+public let primaryLayoutDirectionProperty=Property<Direction,Style>(.right)
+public let secondaryLayoutDirectionProperty=Property<Direction,Style>(.up)
 

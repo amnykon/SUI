@@ -11,6 +11,10 @@ public struct AllocatedSpace {
     self.position=position
     self.size=size
   }
+
+  func pivot() -> AllocatedSpace {
+    return AllocatedSpace(position.pivot(), size.pivot())
+  }
 }
 
 extension AllocatedSpace:Equatable {}

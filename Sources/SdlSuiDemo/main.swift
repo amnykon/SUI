@@ -16,7 +16,7 @@ let colorProperty = Property<Color, Style>(Color(red:255, green:255, blue:255))
 
 let style = Style (
   hBoxWidgetType <- [
-    layoutProperty <- HorizontalLayout(), /* TODO: This should come with Sui */
+    primaryLayoutDirectionProperty <- .down, /* TODO: This should come with Sui */
   ],
 
   colorWidgetType <- [
@@ -24,7 +24,7 @@ let style = Style (
     drawBackground <- {
       (widget, renderer) in
       var renderer = renderer
-     renderer.color = widget.get(property:colorProperty)
+      renderer.color = widget.get(property:colorProperty)
       renderer.fill()
     },
   ],

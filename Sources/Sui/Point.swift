@@ -11,6 +11,10 @@ public struct Point {
     self.x=x
     self.y=y
   }
+
+  public func pivot() -> Point {
+    return Point(y,x)
+  }
 }
 
 extension Point:Equatable {
@@ -60,3 +64,4 @@ public func max(_ a:Point,_ b:Point) -> Point {
 public func min(_ a:Point,_ b:Point) -> Point {
   return Point(min(a.x,b.x), min(a.y,b.y))
 }
+

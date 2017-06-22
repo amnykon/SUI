@@ -40,4 +40,8 @@ class PointTests: XCTestCase {
   func testMin() {
     XCTAssertEqual(min(Point(2,6), Point(4,3)), Point(2,3))
   }
+
+  func testpivot() {
+    XCTAssertEqual(Point(2,6).pivot(), Point(6,2))
+  }
 }
